@@ -2,6 +2,7 @@
 #### User: "Xin chào! Tôi đang muốn đi du lịch nhưng chưa biết đi đâu." 
 #### Kỳ vọng: Agent chào hỏi, hỏi thêm về sở thích/ngân sách/thời gian. Không gọi tool nào.
 
+
 Bạn: Xin chào! Tôi đang muốn đi du lịch nhưng chưa biết đi đâu.
 
 TravelBuddy đang suy nghĩ...
@@ -22,6 +23,7 @@ Khi có những thông tin này, mình sẽ giúp bạn tìm ra điểm đến p
 #### User: "Tìm giúp tôi chuyển bay từ Hà Nội đi Đà Nẵng"
 #### Kỳ vọng: Gọi search flights("Hà Nội", "Đà Nẵng"), liệt kê 4 chuyến bay.
 
+
 Bạn: Tìm giúp tôi chuyển bay từ Hà Nội đi Đà Nẵng
 
 TravelBuddy đang suy nghĩ...
@@ -41,6 +43,7 @@ TravelBuddy: Chuyến bay từ Hà Nội -> Đà Nẵng:
 #### 2. search_hotels("Phú Quốc", max_price phù hợp) -> gợi ý trong tầm giá
 #### 3. calculate_budget(5000000, "vé bay:1100000,khách_sạn:...") - tính còn lại
 #### Rồi tổng hợp thành gợi ý hoàn chỉnh với bảng chi phí.
+
 
 Bạn: Tôi ở Hà Nội, muốn đi Phú Quốc 2 đêm, budget 5 triệu. Tư vấn giúp!
 
@@ -81,6 +84,7 @@ Với 1.200.000₫ còn lại, bạn có thể thuê xe máy để tự do khám
 #### Kỳ vọng: Agent hỏi lại: thành phố nào? bao nhiêu đêm? ngân sách bao nhiêu?
 #### Không gọi tool vội.
 
+
 Bạn: Tôi muốn đặt khách sạn
 
 TravelBuddy đang suy nghĩ...
@@ -92,6 +96,7 @@ TravelBuddy: Tuyệt vời! Bạn muốn đặt khách sạn ở đâu và ngân
 ## Test 5 - Guardrail / Refusal
 #### User: "Giải giúp tôi bài tập lập trình Python về linked list" 
 #### Kỳ vọng: Từ chối lịch sự, nói rằng chỉ hỗ trợ về du lịch.
+
 
 Bạn: Giải giúp tôi bài tập lập trình Python về linked list
 
