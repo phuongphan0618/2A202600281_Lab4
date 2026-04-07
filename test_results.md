@@ -1,10 +1,6 @@
 ## Test 1 – Direct Answer (Không cần tool)
-### User: "Xin chào! Tôi đang muốn đi du lịch nhưng chưa biết đi đâu." 
-### Kỳ vọng: Agent chào hỏi, hỏi thêm về sở thích/ngân sách/thời gian. Không gọi tool nào.
-
-TravelBuddy - Trợ lý Du lịch Thông minh
- Gõ 'quit' để thoát
-============================================================
+#### User: "Xin chào! Tôi đang muốn đi du lịch nhưng chưa biết đi đâu." 
+#### Kỳ vọng: Agent chào hỏi, hỏi thêm về sở thích/ngân sách/thời gian. Không gọi tool nào.
 
 Bạn: Xin chào! Tôi đang muốn đi du lịch nhưng chưa biết đi đâu.
 
@@ -22,8 +18,8 @@ TravelBuddy: Chào bạn! Rất vui được hỗ trợ bạn lên kế hoạch 
 Khi có những thông tin này, mình sẽ giúp bạn tìm ra điểm đến phù hợp và lên kế hoạch chi tiết hơn nha!
 
 ## Test 2 - Single Tool Call
-### User: "Tìm giúp tôi chuyển bay từ Hà Nội đi Đà Nẵng"
-### Kỳ vọng: Gọi search flights("Hà Nội", "Đà Nẵng"), liệt kê 4 chuyến bay.
+#### User: "Tìm giúp tôi chuyển bay từ Hà Nội đi Đà Nẵng"
+#### Kỳ vọng: Gọi search flights("Hà Nội", "Đà Nẵng"), liệt kê 4 chuyến bay.
 
 Bạn: Tìm giúp tôi chuyển bay từ Hà Nội đi Đà Nẵng
 
@@ -37,12 +33,12 @@ TravelBuddy: Chuyến bay từ Hà Nội -> Đà Nẵng:
 - Bamboo Airways | 11:00 - 12:20 | economy | 1.200.000₫
 
 ## Test 3 - Multi-Step Tool Chaining
-### User: "Tôi ở Hà Nội, muốn đi Phú Quốc 2 đêm, budget 5 triệu. Tư vấn giúp!"
-### Kỳ vọng: Agent phải tự chuỗi nhiều bước:
-### 1. search_flights("Hà Nội", "Phú Quốc") -> tìm vé rẻ nhất (1.100.000đ) 
-### 2. search_hotels("Phú Quốc", max_price phù hợp) -> gợi ý trong tầm giá
-### 3. calculate_budget(5000000, "vé bay:1100000,khách_sạn:...") - tính còn lại
-### Rồi tổng hợp thành gợi ý hoàn chỉnh với bảng chi phí.
+#### User: "Tôi ở Hà Nội, muốn đi Phú Quốc 2 đêm, budget 5 triệu. Tư vấn giúp!"
+#### Kỳ vọng: Agent phải tự chuỗi nhiều bước:
+#### 1. search_flights("Hà Nội", "Phú Quốc") -> tìm vé rẻ nhất (1.100.000đ) 
+#### 2. search_hotels("Phú Quốc", max_price phù hợp) -> gợi ý trong tầm giá
+#### 3. calculate_budget(5000000, "vé bay:1100000,khách_sạn:...") - tính còn lại
+#### Rồi tổng hợp thành gợi ý hoàn chỉnh với bảng chi phí.
 
 Bạn: Tôi ở Hà Nội, muốn đi Phú Quốc 2 đêm, budget 5 triệu. Tư vấn giúp!
 
@@ -75,9 +71,9 @@ Sau khi trừ chi phí vé máy bay và khách sạn, bạn còn lại **1.200.0
 Với 1.200.000₫ còn lại, bạn có thể thuê xe máy để tự do khám phá đảo, thưởng thức hải sản tươi ngon ở chợ đêm Dương Đông, hoặc tham gia một tour lặn biển ngắm san hô. Đừng quên thử các món đặc sản như bún quậy, gỏi cá trích nhé!
 
 ## Test 4 - Missing Info / Clarification
-### User: "Tôi muốn đặt khách sạn"
+#### User: "Tôi muốn đặt khách sạn"
 #### Kỳ vọng: Agent hỏi lại: thành phố nào? bao nhiêu đêm? ngân sách bao nhiêu?
-### Không gọi tool vội.
+#### Không gọi tool vội.
 
 Bạn: Tôi muốn đặt khách sạn
 
@@ -87,8 +83,8 @@ Trả lời trực tiếp
 TravelBuddy: Tuyệt vời! Bạn muốn đặt khách sạn ở đâu và ngân sách của bạn cho mỗi đêm là bao nhiêu?
 
 ## Test 5 - Guardrail / Refusal
-### User: "Giải giúp tôi bài tập lập trình Python về linked list" 
-### Kỳ vọng: Từ chối lịch sự, nói rằng chỉ hỗ trợ về du lịch.
+#### User: "Giải giúp tôi bài tập lập trình Python về linked list" 
+#### Kỳ vọng: Từ chối lịch sự, nói rằng chỉ hỗ trợ về du lịch.
 
 Bạn: Giải giúp tôi bài tập lập trình Python về linked list
 
