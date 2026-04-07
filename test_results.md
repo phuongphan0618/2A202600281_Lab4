@@ -5,6 +5,7 @@
 Bạn: Xin chào! Tôi đang muốn đi du lịch nhưng chưa biết đi đâu.
 
 TravelBuddy đang suy nghĩ...
+
 Trả lời trực tiếp
 
 TravelBuddy: Chào bạn! Rất vui được hỗ trợ bạn lên kế hoạch cho chuyến đi sắp tới.        
@@ -24,6 +25,7 @@ Khi có những thông tin này, mình sẽ giúp bạn tìm ra điểm đến p
 Bạn: Tìm giúp tôi chuyển bay từ Hà Nội đi Đà Nẵng
 
 TravelBuddy đang suy nghĩ...
+
 Gọi tool: search_flights({'origin': 'Hà Nội', 'destination': 'Đà Nẵng'})
 
 TravelBuddy: Chuyến bay từ Hà Nội -> Đà Nẵng:
@@ -43,9 +45,13 @@ TravelBuddy: Chuyến bay từ Hà Nội -> Đà Nẵng:
 Bạn: Tôi ở Hà Nội, muốn đi Phú Quốc 2 đêm, budget 5 triệu. Tư vấn giúp!
 
 TravelBuddy đang suy nghĩ...
+
 Gọi tool: search_flights({'origin': 'Hà Nội', 'destination': 'Phú Quốc'})
+
 Gọi tool: search_hotels({'max_price_per_night': 1400000, 'city': 'Phú Quốc'})
+
 Gọi tool: calculate_budget({'total_budget': 5000000, 'expenses': 'vé_máy_bay:2200000, khách_sạn:1600000'})
+
 Trả lời trực tiếp
 
 TravelBuddy: Tuyệt vời! Phú Quốc là một lựa chọn lý tưởng cho chuyến đi 2 đêm của bạn. Dưới đây là gợi ý chi tiết dựa trên ngân sách 5 triệu của bạn:
@@ -78,6 +84,7 @@ Với 1.200.000₫ còn lại, bạn có thể thuê xe máy để tự do khám
 Bạn: Tôi muốn đặt khách sạn
 
 TravelBuddy đang suy nghĩ...
+
 Trả lời trực tiếp
 
 TravelBuddy: Tuyệt vời! Bạn muốn đặt khách sạn ở đâu và ngân sách của bạn cho mỗi đêm là bao nhiêu?
@@ -89,17 +96,24 @@ TravelBuddy: Tuyệt vời! Bạn muốn đặt khách sạn ở đâu và ngân
 Bạn: Giải giúp tôi bài tập lập trình Python về linked list
 
 TravelBuddy đang suy nghĩ...
+
 Trả lời trực tiếp
 
 TravelBuddy: Chào bạn! Rất tiếc mình chỉ có thể hỗ trợ các thông tin về du lịch, đặt phòng, đặt vé thôi. Mình không thể giải bài tập lập trình được. Bạn có muốn mình giúp gì về chuyến đi sắp tới không?
 
 ## Lý do lựa chọn rules và constraint
-Rules:
+* Rules:
+
 3. Cần đủ thông tin để tối ưu câu trả lời, nếu như không có số liệu không tính toán được
+
 4. Ưu tiên tối ưu chi phí (dành cho phần lớn người dùng với ngân sách không cao mà muốn đi chơi du lịch nữa)
-5. User chỉ cần những cái đầu, thay vì nhiều quá sẽ khiến họ rối
+
+5. User chỉ cần những cái tốt nhất, thay vì nhiều quá sẽ khiến họ rối
+
 6. Tránh cho agent chỉ gọi một hai tool mà không sử dụng hết, trong khi vẫn tính thêm budget và cần chi phí lịch trình hiệu quả
 
-Constraints:
+* Constraints:
+
 2. Để nếu sử dụng tool không ra kết quả sẽ không bịa dữ liệu
+
 3. Tránh cho người dùng không để ý việc bị thiếu ngân sách
